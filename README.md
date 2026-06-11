@@ -18,7 +18,7 @@ Succesfully tested it with Ollama 0.30.7.
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/rubenbolink/zettlab-ultra-arc-ollama.git](https://github.com/rubenbolink/zettlab-ultra-arc-ollama.git)
+   git clone https://github.com/rubenbolink/zettlab-ultra-arc-ollama.git
    cd zettlab-ultra-arc-ollama
 
 ## Configure Paths:

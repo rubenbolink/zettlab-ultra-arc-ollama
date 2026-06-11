@@ -34,6 +34,10 @@ sudo docker compose up -d --build
 This setup is optimized for the Intel Arc architecture.
 
 OLLAMA_NUM_PARALLEL: Adjust based on your available system RAM.
-if the group id isn't 105, check it with
+OLLAMA_FLASH_ATTENTION: Enabled by default to maximize token throughput.
+
+## group_add id
+
+if the group_add id isn't 105, check it with
 ```
 stat -c "%g" /dev/dri/renderD128

@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  ollama-intel:
+    build: .
+    container_name: ollama-intel
+    restart: unless-stopped
+    ports:
+      - "11435:11434"
+    volumes:
+      - /zettos/pool/1/teams/docker/DATA/docker/ollama-intel:/root/.ollama # create this directory or change it here
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128
+    group_add:
+      - "105"
+    privileged: true
+    environment:
+      - TZ=Europe/Amsterdam #change it  to your TZ
+      - OLLAMA_IGPU_ENABLE=1
+      - OLLAMA_NUM_PARALLEL=4
+      - OLLAMA_FLASH_ATTENTION=true
+      - OLLAMA_CONTEXT_LENGTH=8192 #change this depending on the amount of RAM you have
+      - OLLAMA_KV_CACHE_TYPE=q8_0
